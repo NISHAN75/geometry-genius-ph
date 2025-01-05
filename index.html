@@ -16,14 +16,14 @@
                     <!-- shape card container -->
                     <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                         <!-- Triangle card -->
-                        <div class="card bg-base-100 w-70 shadow-xl text-center">
+                        <div class="card bg-base-100 w-70 shadow-xl text-center p-3">
                             <figure>
                                 <img src="images/triangle.png" alt="Shoes" />
                             </figure>
                             <div class="card-body text-center">
                                 <h2 class="card-title justify-center">Triangle</h2>
-                                <p class="text-3xl">Area (A) =0.5 X b X h</p>
-                                <div class="flex justify-center items-center pt-4">
+                                <p class="text-lg">Area (A) =0.5 X base X height</p>
+                                <div class="flex justify-center items-center">
                                     <div class="flex items-center">
                                         <input id="triangle-base" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="base">
                                         <span class="mr-4 ml-2">cm</span>
@@ -33,22 +33,22 @@
                                         <span class="mr-4 ml-2">cm</span>
                                     </div>
                                 </div>
-                                <div class="py-3">
-                                    <p class="text-2xl text-emerald-500">Area: <span id="triangle-span"></span>cm<sup>2</sup></p>
+                                <div class="py-2">
+                                    <p class="text-2xl text-emerald-500">Result: <span id="triangle-span"></span>cm<sup>2</sup></p>
                                 </div>
                                 <div class="card-actions">
                                     <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
                                 </div>
                             </div>
                         </div>
-                        <!-- Triangle card -->
-                        <div class="card bg-base-100 w-70 shadow-xl text-center">
+                        <!-- rectangle card -->
+                        <div class="card bg-base-100 w-70 shadow-xl text-center p-3">
                             <figure>
                                 <img src="images/rectangle.png" alt="Shoes" />
                             </figure>
                             <div class="card-body text-center">
                                 <h2 class="card-title justify-center">Rectangle</h2>
-                                <p class="text-3xl">Area (A) = w X l</p>
+                                <p class="text-lg">Area (A) = length X width</p>
                                 <div class="flex justify-center items-center pt-4">
                                     <div class="flex items-center">
                                         <input id="rectangle-length" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="Length">
@@ -59,11 +59,115 @@
                                         <span class="mr-4 ml-2">cm</span>
                                     </div>
                                 </div>
-                                <div class="py-3">
-                                    <p class="text-2xl text-emerald-500">Area: <span id="rectangle-span"></span>cm<sup>2</sup></p>
+                                <div class="py-2">
+                                    <p class="text-2xl text-emerald-500">Result: <span id="rectangle-span"></span>cm<sup>2</sup></p>
                                 </div>
                                 <div class="card-actions">
                                     <button onclick="calculateReatAngleArea()" class="btn btn-primary w-full">Calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- parallelogram card -->
+                        <div class="card bg-base-100 w-70 shadow-xl text-center p-3">
+                            <figure>
+                                <img src="images/parallelogram.png" alt="Shoes" />
+                            </figure>
+                            <div class="card-body text-center">
+                                <h2 class="card-title justify-center">Parallelogram</h2>
+                                <p class="text-lg">Area (A) = base X height</p>
+                                <div class="flex justify-center items-center pt-4">
+                                    <div class="flex items-center">
+                                        <input id="parallelogram-base" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="base">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="parallelogram-height" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="height">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-2xl text-emerald-500">Result: <span id="parallelogram-span"></span>cm<sup>2</sup></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button onclick="calculateParallelogramArea()" class="btn btn-primary w-full">Calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Rhombus card -->
+                        <div class="card bg-base-100 w-70 shadow-xl text-center p-3">
+                            <figure>
+                                <img src="images/rhombus.png" alt="Shoes" />
+                            </figure>
+                            <div class="card-body text-center">
+                                <h2 class="card-title justify-center">Rhombus</h2>
+                                <p class="text-lg">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                                <div class="flex justify-center items-center pt-4">
+                                    <div class="flex items-center">
+                                        <input id="rhombus-d1" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="d1">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="rhombus-d2" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="d2">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-2xl text-emerald-500">Result: <span id="rhombus-span"></span>cm<sup>2</sup></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pentagon card -->
+                        <div class="card bg-base-100 w-70 shadow-xl text-center p-3">
+                            <figure>
+                                <img src="images/pentagon.png" alt="Shoes" />
+                            </figure>
+                            <div class="card-body text-center">
+                                <h2 class="card-title justify-center">Pentagon</h2>
+                                <p class="text-lg">Area (A) = 0.5 X p X b</p>
+                                <div class="flex justify-center items-center pt-4">
+                                    <div class="flex items-center">
+                                        <input id="pentagon-p" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="p">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="pentagon-b" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="b">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-2xl text-emerald-500">Result: <span id="pentagon-span"></span>cm<sup>2</sup></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ellipse card -->
+                        <div class="card bg-base-100 w-70 shadow-xl text-center p-3">
+                            <figure>
+                                <img src="images/ellipse.png" alt="Shoes" />
+                            </figure>
+                            <div class="card-body text-center">
+                                <h2 class="card-title justify-center">Ellipse</h2>
+                                <p class="text-lg">Area (A) = &pi;ab</p>
+                                <div class="flex justify-center items-center pt-4">
+                                    <div class="flex items-center">
+                                        <input id="ellipse-a" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="a">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="ellipse-b" class="w-24 text-2xl bg-gray-200 p-2 rounded-sm" type="text" placeholder="b">
+                                        <span class="mr-4 ml-2">cm</span>
+                                    </div>
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-2xl text-emerald-500">Result: <span id="ellipse-span"></span>cm<sup>2</sup></p>
+                                </div>
+                                <div class="card-actions">
+                                    <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -80,5 +184,9 @@
         <!-- js file  -->
          <script src="js/Triangle.calculate.js"></script>
          <script src="js/rectangle.js"></script>
+         <script src="js/parallelogram.js"></script>
+         <script src="js/rhombus.js"></script>
+         <script src="js/pentagon.js"></script>
+         <script src="js/ellipse.js"></script>
     </body>
 </html>
